@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33A282F8-CEE9-45AC-91E6-F9B2F689A20E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormUI</RootNamespace>
+    <AssemblyName>WindowsFormUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\Factory.cs" />
+    <Compile Include="DataAccess\Helper.cs" />
+    <Compile Include="DataAccess\CustomerRepository.cs" />
+    <Compile Include="DataAccess\Interfaces\IMovieRepository.cs" />
+    <Compile Include="DataAccess\Interfaces\ICustomerRepository.cs" />
+    <Compile Include="DataAccess\Interfaces\IRentalRepository.cs" />
+    <Compile Include="DataAccess\MovieRepository.cs" />
+    <Compile Include="DataAccess\RentalRepository.cs" />
+    <Compile Include="Enums\Genre.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Interfaces\ICustomer.cs" />
+    <Compile Include="Models\Interfaces\IMovie.cs" />
+    <Compile Include="Models\Interfaces\IRental.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AdminHomeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminHomeWindow.Designer.cs">
+      <DependentUpon>AdminHomeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerAddRentalWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerAddRentalWindow.Designer.cs">
+      <DependentUpon>CustomerAddRentalWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerEditWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerEditWindow.Designer.cs">
+      <DependentUpon>CustomerEditWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerListWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerListWindow.Designer.cs">
+      <DependentUpon>CustomerListWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerRegisterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerRegisterWindow.Designer.cs">
+      <DependentUpon>CustomerRegisterWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerRentalsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerRentalsWindow.Designer.cs">
+      <DependentUpon>CustomerRentalsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogInWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogInWindow.Designer.cs">
+      <DependentUpon>LogInWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MovieEditWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MovieEditWindow.Designer.cs">
+      <DependentUpon>MovieEditWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MovieListWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MovieListWindow.Designer.cs">
+      <DependentUpon>MovieListWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MovieRegisterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MovieRegisterWindow.Designer.cs">
+      <DependentUpon>MovieRegisterWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RentalsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RentalsWindow.Designer.cs">
+      <DependentUpon>RentalsWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AdminHomeWindow.resx">
+      <DependentUpon>AdminHomeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerAddRentalWindow.resx">
+      <DependentUpon>CustomerAddRentalWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerEditWindow.resx">
+      <DependentUpon>CustomerEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerListWindow.resx">
+      <DependentUpon>CustomerListWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerRegisterWindow.resx">
+      <DependentUpon>CustomerRegisterWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerRentalsWindow.resx">
+      <DependentUpon>CustomerRentalsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogInWindow.resx">
+      <DependentUpon>LogInWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MovieEditWindow.resx">
+      <DependentUpon>MovieEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MovieListWindow.resx">
+      <DependentUpon>MovieListWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MovieRegisterWindow.resx">
+      <DependentUpon>MovieRegisterWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RentalsWindow.resx">
+      <DependentUpon>RentalsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
